@@ -1,16 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Invitation</title>
+    <title>आकांक्षा आणि प्रकाश शुभविवाह</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        :root {
+            --royal-red: #800000;
+            --gold: #D4AF37;
+            --cream: #FFFDF5;
+            --soft-pink: #FFF0F5;
+        }
+
+        body, html {
+            margin: 0; padding: 0;
+            height: 100%;
+            font-family: 'Tiro Devanagari Marathi', serif;
+            background-color: var(--soft-pink);
+            overflow: hidden;
+        }
+
+        .swiper { width: 100%; height: 100vh; }
+
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            box-sizing: border-box;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide-1 { background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://www.transparenttextures.com/patterns/cream-paper.png'); }
+        .slide-2 { background-color: #fcfaf2; }
+        .slide-3 { background-color: #fff9f9; }
+
+        .border-box {
+            border: 5px double var(--gold);
+            padding: 30px 15px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        h1 { font-size: 2.8rem; color: var(--royal-red); margin: 10px 0; }
+        h2 { font-size: 1.5rem; color: var(--gold); }
+        .sub-text { letter-spacing: 2px; font-size: 0.9rem; color: #555; }
+
+        .photo-stack {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .img-frame {
+            width: 140px; height: 180px;
+            border-radius: 70px 70px 10px 10px;
+            border: 4px solid var(--gold);
+            object-fit: cover;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .time-box {
+            background: var(--royal-red);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            min-width: 60px;
+        }
+        .time-box b { font-size: 1.4rem; display: block; }
+        .time-box span { font-size: 0.7rem; }
+
+        .btn-map {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: var(--gold);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(212,175,55,0.4);
+        }
+
+        .swipe-hint {
+            position: absolute;
+            bottom: 30px;
+            font-size: 0.8rem;
+            color: var(--gold);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+        }
+    </style>
 </head>
 <body>
-    <h1>You're Invited!</h1>
-    <p>We are thrilled to announce our wedding!</p>
-    <p>Date: June 17, 2026</p>
-    <p>Location: Central Park, New York City</p>
-    <p>Please join us for a celebration filled with love and joy.</p>
-    <p>RSVP by May 1, 2026</p>
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            
+            <div class="swiper-slide slide-1">
+                <div class="border-box animate__animated animate__fadeIn">
+                    <p class="sub-text">॥ श्री गणेश प्रसन्न ॥</p>
+                    <h2 style="margin-top: 20px;">चि.सौ.कां. आकांक्षा</h2>
+                    <p>आणि</p>
+                    <h2>चि. प्रकाश</h2>
+                    <div class="photo-stack">
+                        <img src="https://i.postimg.cc/mD3WbXvF/1000926257.jpg" class="img-frame" alt="Bride">
+                        <img src="https://i.postimg.cc/qR0p256V/1000926260.jpg" class="img-frame" alt="Groom">
+                    </div>
+                    <p>यांचा शुभविवाह सोहळा</p>
+                </div>
+                <div class="swipe-hint">माहितीसाठी डावीकडे स्वाइप करा ⮕</div>
+            </div>
+
+            <div class="swiper-slide slide-2">
+                <div class="border-box">
+                    <h2 style="color: var(--royal-red);">लग्नाचा मुहूर्त</h2>
+                    <hr style="border: 0; border-top: 1px solid var(--gold); margin: 20px 0;">
+                    <p><b>बुधवार दि. २९ एप्रिल २०२६</b></p>
+                    <p>दुपारी १ वाजून ५५ मिनिटांनी</p>
+                    <p style="font-size: 0.9rem; color: #666;">(साखरपुडा व हळदी समारंभ: सकाळी ८ वा.)</p>
+                    
+                    <div class="timer">
+                        <div class="time-box"><b id="days">00</b><span>दिवस</span></div>
+                        <div class="time-box"><b id="hours">00</b><span>तास</span></div>
+                        <div class="time-box"><b id="mins">00</b><span>मिमी</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide-3">
+                <div class="border-box">
+                    <h2 style="color: var(--royal-red);">विवाह स्थळ</h2>
+                    <p style="font-size: 1.2rem; line-height: 1.6;">
+                        <b>आनंदी गणेश मंगल कार्यालय</b><br>
+                        अकलूज, तालुका माळशिरस,<br>
+                        जिल्हा सोलापूर
+                    </p>
+                    <a href="https://www.google.com/maps/search/Anandi+Ganesh+Mangal+Karyalay+Akluj" target="_blank" class="btn-map">📍 लोकेशन मॅप</a>
+                    
+                    <div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 15px;">
+                        <p style="font-size: 0.8rem; color: #888;">निमंत्रक:<br><b>समस्त देशमुख व माने-देशमुख परिवार</b></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: false,
+            pagination: { el: '.swiper-pagination', dynamicBullets: true },
+            on: {
+                init: function() { showFlowers(); },
+                slideChange: function() { if(this.activeIndex === 0) showFlowers(); }
+            }
+        });
+
+        function showFlowers() {
+            confetti({ particleCount: 150, spread: 70, origin: { y: 0.8 }, colors: ['#D4AF37', '#800000', '#FFC0CB'] });
+        }
+
+        const weddingDate = new Date("April 29, 2026 13:55:00").getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = weddingDate - now;
+            document.getElementById('days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+            document.getElementById('hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById('mins').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        }, 1000);
+    </script>
 </body>
 </html>
